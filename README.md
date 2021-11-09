@@ -19,3 +19,7 @@ Vprašanja, na katera bom poskušal odgovoriti:
 * kako je povprečna ocena odvisna od števila ocen,
 * kako je število ocen odvisno od števila kritik,
 * kako se vrstni red albumov spreminja glede na obtežitev ocen.
+
+## Opomba
+Stran RYM onemogoča avtomatičen zajem podatkov, zato sem jih moral zajeti na roko.
+Sicer bi to naredil že moj program.
