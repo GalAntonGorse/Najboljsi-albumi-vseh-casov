@@ -20,6 +20,14 @@ Vprašanja, na katera bom poskušal odgovoriti:
 * kako je število ocen odvisno od števila kritik,
 * kako se vrstni red albumov spreminja glede na obtežitev ocen.
 
+## Vsebina
+V mapi obdelani_podatki so naslednje datoteke:
+* albumi.json, ki za vsak album vsebuje seznam z vsemi podatki, ki sem jih zajel (tj. id albuma, naslov, seznam izvajalcev, leto izida, povprečno oceno, 
+število ocen, število kritik, seznam žanrov, seznam sekundarnih žanrov in niz, ki vsebuje opis)
+* albumi.csv, ki za vsak album vsebuje njegov id, naslov, leto izida, povprečno oceno, število ocen, število kritik in niz z opisom
+* opus.csv, ki vsebuje id albuma in enega izmed njegovih izvajalcev
+* zanri.csv, ki vsebuje id albuma in enega izmed njegovih (sekundarnih) žanrov.
+
 ## Opomba
-Stran RYM onemogoča avtomatičen zajem podatkov, zato sem jih moral na roko naložiti v datoteke "najboljsi-albumi-{i}.html".
+Stran RYM onemogoča avtomatičen zajem podatkov, zato sem jih moral na roko naložiti v datoteke "najboljsi-albumi-{i}.html" in šele nato zagnati "poberi_albume.py"
 Sicer bi to naredil že moj program.
