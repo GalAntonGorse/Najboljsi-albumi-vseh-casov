@@ -3,7 +3,7 @@ Projektna naloga iz obdelave podatkov pri programiranju 1
 
 ## Podatki
 Podatke bom zajemal iz strani [RateYourMusic](https://rateyourmusic.com/charts/top/album/all-time/), prek katere bom analiziral 
-5000 "najvišje ocenjenih" (stran uporablja obtežene ocene) glasbenih albumov.
+1000 "najvišje ocenjenih" (stran uporablja obtežene ocene) glasbenih albumov.
 
 Za vsak album bom zajel:
 * naslov in izvajalce,
