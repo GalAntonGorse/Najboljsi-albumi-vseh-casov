@@ -3,12 +3,11 @@ Projektna naloga iz obdelave podatkov pri programiranju 1
 
 ## Podatki
 
-Podatke bom zajel iz strani [RateYourMusic](https://rateyourmusic.com/charts/top/album/all-time/) (v nadaljevanj RYM), prek katere bom analiziral 
-1000 najvišje ocenjenih glasbenih albumov. Za vsakega izmed teh albumov bom zajel naslov in izvajalce, leto izida, primarne in sekundarne žanre, 
+Podatke sem zajel iz strani [RateYourMusic](https://rateyourmusic.com/charts/top/album/all-time/) (v nadaljevanj RYM), prek katere sem analiziral 
+1000 najvišje ocenjenih glasbenih albumov. Za vsakega izmed teh albumov sem zajel naslov in izvajalce, leto izida, primarne in sekundarne žanre, 
 opis albuma, povprečno oceno ter število ocen in kritik.
 
 ## Cilji
-<<<<<<< HEAD
 
 Z zajetimi podatki bom skušal odgovoriti na naslednja vprašanja.
 
@@ -52,4 +51,3 @@ V mapi obdelani_podatki so naslednje datoteke:
 ## Opomba
 Stran RYM onemogoča avtomatičen zajem podatkov, zato sem jih moral na roko naložiti v datoteke "najboljsi-albumi-{i}.html" in šele nato zagnati "poberi_albume.py"
 Sicer bi to naredil že moj program.
->>>>>>> 9ca49c784f19025a6921720136e7c9e2df609f41
