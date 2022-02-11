@@ -33,12 +33,6 @@ Ogledal si bom izvajalce, ki so za vsako posamezno desetletje ustvarili največj
 * ### Šesta točka: napoved žanra glasbe glede na lastnosti albuma
 
 Testiral bom na primer hipotezo, da je album z ženskimi vokali najverjetneje žanra pop, album, ki zveni jezno, pa najverjetneje žanra metal.
-=======
-Vprašanja, na katera bom poskušal odgovoriti:
-* kateri izvajalci se najpogosteje pojavljajo na seznamu,
-* kako je povprečna ocena odvisna od števila ocen,
-* kako je število ocen odvisno od števila kritik,
-* kako se vrstni red albumov spreminja glede na obtežitev ocen.
 
 ## Vsebina
 V mapi obdelani_podatki so naslednje datoteke:
@@ -47,7 +41,8 @@ V mapi obdelani_podatki so naslednje datoteke:
 * albumi.csv, ki za vsak album vsebuje njegov id, naslov, leto izida, povprečno oceno, število ocen, število kritik in niz z opisom
 * opus.csv, ki vsebuje id albuma in enega izmed njegovih izvajalcev
 * zanri.csv, ki vsebuje id albuma in enega izmed njegovih (sekundarnih) žanrov.
+Podatke sem analiziral v datoteki analiza_podatkov.ipynb.
 
 ## Opomba
-Stran RYM onemogoča avtomatičen zajem podatkov, zato sem jih moral na roko naložiti v datoteke "najboljsi-albumi-{i}.html" in šele nato zagnati "poberi_albume.py"
+Stran RYM onemogoča avtomatičen zajem podatkov, zato sem jih moral na roko naložiti v datoteke "najboljsi-albumi-{i}.html" in šele nato zagnati "poberi_albume.py".
 Sicer bi to naredil že moj program.
