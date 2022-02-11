@@ -11,7 +11,7 @@ vzorec_bloka = re.compile(
 )
 
 vzorec_albuma = re.compile(
-    r'<div class="topcharts_item_title"><a href="/release/album/.*?/.*?/" class="release" title="\[Album(?P<id_album>\d+?)\]">(?P<naslov>.*?)</a></div>.*?'
+    r'<div class="topcharts_item_title"><a href="/release/album/.*?/.*?/" class="release" title="\[Album(?P<id>\d+?)\]">(?P<naslov>.*?)</a></div>.*?'
     r'<div class="topcharts_item_artist_newmusicpage topcharts_item_artist">(?P<izvajalci>.*?)</div>.*?'
     r'<div class="topcharts_item_releasedate">\d*\s?\w*?\s*(?P<leto>\d{4}).*?'
     r'<span class="topcharts_stat topcharts_avg_rating_stat">(?P<ocena>.+?)</span>.*?'
@@ -66,7 +66,7 @@ def izloci_opise(niz):
     
 def izloci_podatke_albuma(blok):
     album = vzorec_albuma.search(blok).groupdict()
-    album['id_album'] = int(album['id_album'])
+    album['id'] = int(album['id'])
     album['naslov'] = album['naslov'].replace("&amp;", "&").replace("&#39;", "'").replace("&quot;", '"')
     album['izvajalci'] = izloci_izvajalce(album['izvajalci'])
     album['zanri'] = izloci_zanre(blok)
@@ -96,16 +96,16 @@ def izloci_gnezdene_podatke(albumi):
         if izvajalec not in videni_izvajalci:
             videni_izvajalci.add(izvajalec)
         opus.append({
-            'album': album['id_album'],
+            'album': album['id'],
             'izvajalec': izvajalec
         })
 
 
     for album in albumi:
         for zanr in album.pop('zanri'):
-            zanri.append({'album': album['id_album'], 'zanr': zanr})
+            zanri.append({'album': album['id'], 'zanr': zanr})
         for zanr in album.pop('sek_zanri'):
-            zanri.append({'album': album['id_album'], 'zanr': zanr})
+            zanri.append({'album': album['id'], 'zanr': zanr})
         for izvajalec in album.pop('izvajalci'):
             dodaj_delo(album, izvajalec)
 
@@ -119,12 +119,12 @@ for st_strani in range(1, 26):
     for album in albumi_na_strani(st_strani):
         albumi.append(album)
 
-albumi.sort(key=lambda album: album['id_album'])
+albumi.sort(key=lambda album: album['id'])
 orodja.zapisi_json(albumi, 'obdelani-podatki/albumi.json')
 opus, zanri = izloci_gnezdene_podatke(albumi)
 orodja.zapisi_csv(
     albumi,
-    ['id_album', 'naslov', 'leto', 'ocena', 'st_ocen', 'st_kritik', 'opisi'], 'obdelani-podatki/albumi.csv'
+    ['id', 'naslov', 'leto', 'ocena', 'st_ocen', 'st_kritik', 'opisi'], 'obdelani-podatki/albumi.csv'
 )
 orodja.zapisi_csv(opus, ['album', 'izvajalec'], 'obdelani-podatki/opus.csv')
 orodja.zapisi_csv(zanri, ['album', 'zanr'], 'obdelani-podatki/zanri.csv')

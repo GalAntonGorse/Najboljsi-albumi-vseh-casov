@@ -1,4 +1,4 @@
-id_album,naslov,leto,ocena,st_ocen,st_kritik,opisi
+id,naslov,leto,ocena,st_ocen,st_kritik,opisi
 8,The Beatles [White Album],1968,4.14,35780,1082,"eclectic, melodic, playful, male vocals, introspective, quirky, energetic, love, rebellious, sarcastic"
 11,Are You Experienced,1967,4.12,23375,512,"energetic, psychedelic, sexual, drugs, raw, male vocals, hedonistic, heavy, hypnotic, passionate"
 12,Abbey Road,1969,4.25,44843,962,"melodic, warm, male vocals, bittersweet, summer, uplifting, love, romantic, eclectic, sentimental"
