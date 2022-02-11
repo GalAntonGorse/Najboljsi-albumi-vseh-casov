@@ -41,6 +41,7 @@ V mapi obdelani_podatki so naslednje datoteke:
 * albumi.csv, ki za vsak album vsebuje njegov id, naslov, leto izida, povprečno oceno, število ocen, število kritik in niz z opisom
 * opus.csv, ki vsebuje id albuma in enega izmed njegovih izvajalcev
 * zanri.csv, ki vsebuje id albuma in enega izmed njegovih (sekundarnih) žanrov.
+
 Podatke sem analiziral v datoteki analiza_podatkov.ipynb.
 
 ## Opomba
